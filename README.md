@@ -28,6 +28,24 @@ The `meet_traveller` function is designed to generate nice greetings to each new
 meet_traveller()
 ```
 
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-2-f6a9d4fa9473> in <module>
+    ----> 1 meet_traveller()
+    
+
+    <ipython-input-1-0f8a0b87e7e6> in meet_traveller()
+          1 def meet_traveller():
+    ----> 2     welcome_message = "Hi " + traveller.title() + ", I'm so glad we'll be going on the trip together!"
+          3     return welcome_message # return statement
+
+
+    NameError: name 'traveller' is not defined
+
+
 The function requires the variable `traveller`, but it's hard to tell that before running the function.  When code requires something to work, we call that something a **dependency**. Below, our function `meet` depends on a global variable named `traveller` being provided, otherwise it will not work and we'll get the `NameError` we see above. 
 Ideally, our function's dependencies would be more explicit than in our `meet_traveller` function.  Let's adapt this function to make its dependencies more explicit.
 
@@ -49,9 +67,21 @@ This tells us, and Python, to not even run the code unless the proper data is pr
 meet()
 ```
 
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    <ipython-input-4-c60a3be83cb4> in <module>
+    ----> 1 meet()
+    
+
+    TypeError: meet() missing 1 required positional argument: 'traveller'
+
+
 Do you see that error message at the bottom there?  It's pretty explicit about saying that this function requires a positional argument named `traveller`.  
 
-So, by using an argument, the function signature tells us how to run this function.  We refer to the function by it's name and then pass through a string representing the `traveller`.
+So, by using an argument, the function signature tells us how to run this function.  We refer to the function by its name and then pass through a string representing the `traveller`.
 
 
 ```python
@@ -79,12 +109,31 @@ And we can easily change what `traveller` points to just by passing through a di
 meet('fred')
 ```
 
+
+
+
+    "Hi Fred, I'm so glad we'll be going on the trip together!"
+
+
+
 But notice that the `traveller` argument is only accessible just inside of the function.
 
 
 ```python
 traveller
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    <ipython-input-7-12a71905bbfe> in <module>
+    ----> 1 traveller
+    
+
+    NameError: name 'traveller' is not defined
+
 
 So by using arguments, we can easily see what a function requires to work, change the output by passing through different data to the function, and ensure that we only have to worry about what our argument is while inside that function. 
 
@@ -103,6 +152,13 @@ def find_the_mean(list_nums):
 find_the_mean([1,2,3,4,5,6,7,8,9,10])
 ```
 
+
+
+
+    5.5
+
+
+
 Now let's imagine we are looking at a list of populations in a given state or region. Perhaps we would even like to get these numbers in order to compare the mean populations of different areas.
 
 
@@ -112,10 +168,24 @@ find_the_mean(area_one_pops)
 ```
 
 
+
+
+    156755.5
+
+
+
+
 ```python
 area_two_pops = [43845, 54930, 59354, 96403, 73492, 729320]
 find_the_mean(area_two_pops)
 ```
+
+
+
+
+    176224.0
+
+
 
 Great, so, we can *definitely* find the mean from lists of population. What if we would like to return the list that has the largest mean population? We could write a function that takes **2** arguments that are lists and returns the list that has the greatest mean.
 
@@ -135,8 +205,15 @@ def find_biggest_pop(list_pops_one, list_pops_two):
 find_biggest_pop(area_one_pops, area_two_pops)
 ```
 
-Awesome! Going forward, we will be able to use functions and arguments to write code that is much more reusable and concise to model mathematic and statistical equations.
 
-### Summary
 
-In this lesson, we saw some of the benefits of using arguments: they make our functions more flexible and predictable.  Our functions are more flexible as the functions vary based on the argument provided to the function.  Arguments make our functions predictable by making functions more explicit about their dependencies. They also allow us to change the value of an argument which only affects the functions internal values and more directly shows us how the output of our function will vary based on different inputs.    
+
+    'The second list, [43845, 54930, 59354, 96403, 73492, 729320] has the larger mean population'
+
+
+
+Awesome! Going forward, we will be able to use functions and arguments to write code that is much more reusable and concise to model mathematical and statistical equations.
+
+## Summary
+
+In this lesson, we saw some of the benefits of using arguments: they make our functions more flexible and predictable.  Our functions are more flexible as the functions vary based on the argument provided to the function.  Arguments make our functions predictable by making functions more explicit about their dependencies. They also allow us to change the value of an argument which only affects the function's internal values and more directly shows us how the output of our function will vary based on different inputs.    

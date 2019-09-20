@@ -12,7 +12,7 @@ You will be able to:
 
 ### Predictability with arguments
 
-In the previous lesson, we saw that functions were a powerful tool.  They allow us to repeat operations and apply these operations to different data.  For example, take a look at a function called `meet_traveller`.
+In the previous lesson, we saw that functions were a powerful tool.  They allow us to repeat operations and apply these operations to different data.  For example, take a look at a function called `meet_traveller()`.
 
 
 ```python
@@ -21,7 +21,7 @@ def meet_traveller():
     return welcome_message # return statement
 ```
 
-The `meet_traveller` function is designed to generate nice greetings to each new employee.  Do we need anything else to run the function?  How do we know which new employee the function will greet?  Let's run the function and see what happens.
+The `meet_traveller()` function is designed to generate nice greetings to each new employee.  Do we need anything else to run the function?  How do we know which new employee the function will greet?  Let's run the function and see what happens.
 
 
 ```python
@@ -46,8 +46,8 @@ meet_traveller()
     NameError: name 'traveller' is not defined
 
 
-The function requires the variable `traveller`, but it's hard to tell that before running the function.  When code requires something to work, we call that something a **dependency**. Below, our function `meet` depends on a global variable named `traveller` being provided, otherwise it will not work and we'll get the `NameError` we see above. 
-Ideally, our function's dependencies would be more explicit than in our `meet_traveller` function.  Let's adapt this function to make its dependencies more explicit.
+The function requires the variable `traveller`, but it's hard to tell that before running the function.  When code requires something to work, we call that something a **dependency**. Below, our function `meet()` depends on a global variable named `traveller` being provided, otherwise it will not work and we'll get the `NameError` we see above. 
+Ideally, our function's dependencies would be more explicit than in our `meet_traveller()` function.  Let's adapt this function to make its dependencies more explicit.
 
 
 ```python
@@ -88,11 +88,11 @@ So, by using an argument, the function signature tells us how to run this functi
 meet('sally')
 ```
 
-> **Note:** Before we move on, it is important to note the difference between an **argument** and a **parameter**. We will see these terms **a lot** going forward and having a clear understanding of them is imperative. An **argument** is the data that we pass to a function before execution (i.e. `'sally'` in the example above). However, a **parameter** is the variable we define in the *function signature* (i.e. `traveller` in the example above). So, these two are very similar, but the difference comes down to whether we are talking about the variable we are using in the method *signature* or the actual data we are using when we *execute* the function later. 
+> **Note:** Before we move on, it is important to note the difference between an **argument** and a **parameter**. We will see these terms **a lot** going forward and having a clear understanding of them is imperative. An **argument** is the data that we pass to a function before execution (i.e. `'sally'` in the example above). However, a **parameter** is the variable we define in the *function signature* (i.e. `traveller` in the example above). So, these two are very similar, but the difference comes down to whether we are talking about the variable we are using in the function *signature* or the actual data we are using when we *execute* the function later. 
 
 ### Flexibility
 
-Let's take another look at the `meet` function. Notice, that the argument operates like a variable in that we can easily alter the data that `traveller` points to. When we pass through the string, `'Sally'`, the function replaces `traveller` with the string `'Sally'`.  
+Let's take another look at the `meet()` function. Notice, that the argument operates like a variable in that we can easily alter the data that `traveller` points to. When we pass through the string, `'Sally'`, the function replaces `traveller` with the string `'Sally'`.  
 
 
 ```python
@@ -137,7 +137,7 @@ traveller
 
 So by using arguments, we can easily see what a function requires to work, change the output by passing through different data to the function, and ensure that we only have to worry about what our argument is while inside that function. 
 
-Now, we can use functions with arguments to do a lot more than just make some strings more dynamic. Let's say we have a math operation that we need to perform over and over. Let's say, the mean of a list of numbers. We could define a function named `find_the_mean` that takes in a list and returns a number representing the mean from the list.
+Now, we can use functions with arguments to do a lot more than just make some strings more dynamic. Let's say we have a math operation that we need to perform over and over. Let's say, the mean of a list of numbers. We could define a function named `find_the_mean()` that takes in a list and returns a number representing the mean from the list.
 
 
 ```python

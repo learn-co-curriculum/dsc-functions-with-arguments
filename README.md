@@ -1,5 +1,5 @@
 
-# Functions With Arguments
+# Functions with Arguments
 
 ## Introduction
 Function arguments are a powerful tool in programming.  As we'll see, arguments make our functions more flexible and reusable by explicitly allowing different inputs to be used in a function and changing the output of the function based on these inputs.
@@ -8,7 +8,7 @@ When used correctly, function arguments bring clarity to what inputs a function 
 
 ## Objectives
 You will be able to:
-* Create and use custom functions with arguments
+* Declare and use a function with arguments
 
 ### Predictability with arguments
 
@@ -149,7 +149,7 @@ def find_the_mean(list_nums):
 
 
 ```python
-find_the_mean([1,2,3,4,5,6,7,8,9,10])
+find_the_mean([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 ```
 
 

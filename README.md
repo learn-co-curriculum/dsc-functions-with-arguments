@@ -33,7 +33,7 @@ meet_traveller()
 
     NameError                                 Traceback (most recent call last)
 
-    <ipython-input-2-f6a9d4fa9473> in <module>
+    <ipython-input-2-f6a9d4fa9473> in <module>()
     ----> 1 meet_traveller()
     
 
@@ -72,7 +72,7 @@ meet()
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-4-c60a3be83cb4> in <module>
+    <ipython-input-4-c60a3be83cb4> in <module>()
     ----> 1 meet()
     
 
@@ -87,6 +87,13 @@ So, by using an argument, the function signature tells us how to run this functi
 ```python
 meet('sally')
 ```
+
+
+
+
+    "Hi Sally, I'm so glad we'll be going on the trip together!"
+
+
 
 > **Note:** Before we move on, it is important to note the difference between an **argument** and a **parameter**. We will see these terms **a lot** going forward and having a clear understanding of them is imperative. An **argument** is the data that we pass to a function before execution (i.e. `'sally'` in the example above). However, a **parameter** is the variable we define in the *function signature* (i.e. `traveller` in the example above). So, these two are very similar, but the difference comes down to whether we are talking about the variable we are using in the function *signature* or the actual data we are using when we *execute* the function later. 
 
@@ -128,7 +135,7 @@ traveller
 
     NameError                                 Traceback (most recent call last)
 
-    <ipython-input-7-12a71905bbfe> in <module>
+    <ipython-input-8-12a71905bbfe> in <module>()
     ----> 1 traveller
     
 
@@ -195,9 +202,9 @@ def find_biggest_pop(list_pops_one, list_pops_two):
     mean_one = find_the_mean(list_pops_one)
     mean_two = find_the_mean(list_pops_two)
     if (mean_one > mean_two):
-        return f"The first list, {list_pops_one} has the larger mean population"
+        return print("The first list,", list_pops_one ," has the larger mean population")
     else:
-        return f"The second list, {list_pops_two} has the larger mean population"
+        return print("The second list,", list_pops_one ,"has the larger mean population")
 ```
 
 
@@ -205,11 +212,7 @@ def find_biggest_pop(list_pops_one, list_pops_two):
 find_biggest_pop(area_one_pops, area_two_pops)
 ```
 
-
-
-
-    'The second list, [43845, 54930, 59354, 96403, 73492, 729320] has the larger mean population'
-
+    The second list, [10453, 12383, 8034, 800835, 76434, 32394] has the larger mean population
 
 
 Awesome! Going forward, we will be able to use functions and arguments to write code that is much more reusable and concise to model mathematical and statistical equations.

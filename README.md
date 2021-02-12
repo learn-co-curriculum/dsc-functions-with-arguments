@@ -204,7 +204,7 @@ def find_biggest_pop(list_pops_one, list_pops_two):
     if (mean_one > mean_two):
         return print("The first list,", list_pops_one ," has the larger mean population")
     else:
-        return print("The second list,", list_pops_one ,"has the larger mean population")
+        return print("The second list,", list_pops_two ,"has the larger mean population")
 ```
 
 

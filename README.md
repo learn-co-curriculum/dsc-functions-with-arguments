@@ -1,4 +1,3 @@
-
 # Functions with Arguments
 
 ## Introduction
@@ -7,7 +6,9 @@ Function arguments are a powerful tool in programming.  As we'll see, arguments 
 When used correctly, function arguments bring clarity to what inputs a function needs to operate, as well as how a function uses these inputs.  
 
 ## Objectives
+
 You will be able to:
+
 * Declare and use a function with arguments
 
 ### Predictability with arguments
